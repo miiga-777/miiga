@@ -1,0 +1,177 @@
+/* 🟠 General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: url('background.jpg') center/cover no-repeat fixed;
+    color: #1f1f1f;
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    position: relative;
+  }
+  
+  /* 🔵 Blur effect as a separate overlay layer */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px) brightness(0.95);
+    z-index: -1;
+  }
+  
+  /* ✅ Header */
+  header {
+    width: 100%;
+    padding: 1.4rem 2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #111;
+  }
+  
+  nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  nav a:hover {
+    background-color: rgba(0, 119, 255, 0.1);
+    color: #0077ff;
+  }
+  
+  /* ✅ Dark/Light Mode Toggle */
+  #modeToggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #555;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  #modeToggle:hover {
+    transform: scale(1.1);
+    color: #0077ff;
+  }
+  
+  /* ✅ Main Blog Content */
+  main {
+    max-width: 800px;
+    margin: 5rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .blog h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #111;
+  }
+  
+  .blog article p {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.7;
+  }
+  
+  /* ✅ Image Styling */
+  .blog article img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .blog article img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ✅ Footer */
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  /* 🌙 Dark Mode Styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode::before {
+    backdrop-filter: blur(8px) brightness(0.5);
+  }
+  
+  body.dark-mode header {
+    background-color: rgba(20, 20, 20, 0.7);
+    color: #eee;
+  }
+  
+  body.dark-mode header h1 {
+    color: #f1f1f1;
+  }
+  
+  body.dark-mode nav a {
+    color: #ccc;
+  }
+  
+  body.dark-mode nav a:hover {
+    background-color: rgba(77, 184, 255, 0.08);
+    color: #4db8ff;
+  }
+  
+  body.dark-mode main {
+    background: rgba(30, 30, 30, 0.85);
+    color: #ddd;
+  }
+  
+  body.dark-mode .blog h2 {
+    color: #fff;
+  }
+  
+  body.dark-mode .blog article p {
+    color: #bbb;
+  }
+  
+  body.dark-mode footer {
+    color: #aaa;
+  }
+  
+  body.dark-mode #modeToggle {
+    color: #ccc;
+  }
+  

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Миний Блог ба CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="background"></div> <!-- Фонов зурагны layer -->
+
+  <div class="content">
+    <header>
+      <h1>Миний Блог</h1>
+      <nav>
+        <a href="blog.html">📝 Блог</a>
+        <a href="cv.html">📄 CV</a>
+        <a href="contact.html">📞 Холбоо барих</a>
+      </nav>
+      <button id="modeToggle">🌙 / ☀️</button>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>Сайн байна уу</h2>
+        <p>Миний блог-д тавтай морил.</p>
+      </section>
+
+      <section class="about">
+        <h3>Б. Мягмардорж</h3>
+        <p>
+          ИЗОУИС-д суралцдаг 3-р курсын оюутан.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025</p>
+    </footer>
+  </div>
+
+  <script>
+    const modeToggle = document.getElementById('modeToggle');
+    const body = document.body;
+
+    modeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>

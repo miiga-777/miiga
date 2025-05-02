@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Блог</title>
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+  <header>
+    <h1>Блог</h1>
+    <nav>
+      <a href="index.html">🏠 Нүүр</a>
+      <a href="cv.html">📄 CV</a>
+      <a href="contact.html">📞 Холбоо барих</a>
+    </nav>
+    <button id="modeToggle">🌙 / ☀️ </button>
+  </header>
+
+  <main>
+    <section class="blog">
+      <h2>Миний талаар:</h2>
+      <article>
+        <p>Миний бие extreme спорт-д их дуртай, extreme спорт нь мэдрэмжийн хувьд маш олон янз байдаг. Айдас, сэтгэл догдлол, адреналин, зориг, итгэл—тэдгээр нь бүгд энэ спортыг онцлог болгодог. Миний хувьд энэ спортууд нь зөвхөн физик бэрхшээл төдийгүй, сэтгэл санааны хувьд ч нэгэн сонирхолтой аялал болдог.</p>
+        <img src="extreme.jpg" alt="Extreme Sports" />
+      </article>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025</p>
+  </footer>
+
+  <script>
+    const modeToggle = document.getElementById('modeToggle');
+    const body = document.body;
+
+    modeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
